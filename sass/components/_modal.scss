@@ -33,10 +33,16 @@
 
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent--color);
+    transition: fill 250ms var(--time--animation);
+  }
 }
 
-.modal-button:hover,
-.modal-button:focus {
-  fill: var(--accent--color);
-  transition: fill 250ms var(--time--animation);
-}
+// .modal-button:hover,
+// .modal-button:focus {
+//   fill: var(--accent--color);
+//   transition: fill 250ms var(--time--animation);
+// }

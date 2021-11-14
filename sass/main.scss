@@ -1,6 +1,9 @@
+// utils
 @import "utils/variables";
 @import "utils/visually-hidden";
+// base
 @import "base/common";
+// components
 @import "components/container";
 @import "components/buttom";
 @import "components/buttom__primary";
@@ -9,6 +12,7 @@
 @import "components/section";
 @import "components/form";
 @import "components/modal";
+// layout
 @import "layout/header";
 @import "layout/hero";
 @import "layout/benefits";

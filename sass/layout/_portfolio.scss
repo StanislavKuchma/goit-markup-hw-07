@@ -22,10 +22,10 @@
   margin-left: 30px;
   margin-bottom: 30px;
 }
-.projects-focus:hover .projects-card-text,
-.projects-focus:focus .projects-card-text {
-  transform: translateY(0);
-}
+// .projects-focus:hover .projects-card-text,
+// .projects-focus:focus .projects-card-text {
+//   transform: translateY(0);
+// }
 .projects-card-wrap {
   position: relative;
   overflow: hidden;
@@ -44,17 +44,28 @@
 
   color: var(--text--color--white);
   background: rgba(33, 150, 243, 0.9);
+
+  .projects-focus:hover &,
+  .projects-focus:focus & {
+    transform: translateY(0);
+  }
 }
 .projects-focus {
   display: block;
 
   transition: box-shadow 250ms var(--time--animation);
+
+  &:focus,
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
-.projects-focus:focus,
-.projects-focus:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+// .projects-focus:focus,
+// .projects-focus:hover {
+//   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+//     1px 4px 6px rgba(0, 0, 0, 0.16);
+// }
 .projects-cards-title {
   padding: 20px 24px;
 
@@ -74,4 +85,7 @@
 .description {
   font-size: 16px;
   line-height: 1.88;
+}
+.button-menu:not(:last-child) {
+  margin-right: 8px;
 }

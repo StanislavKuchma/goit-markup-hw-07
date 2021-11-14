@@ -5,7 +5,6 @@
   line-height: 1.19;
 }
 .our-team {
-  /* max-width: 1600px; */
   background-color: var(--backgraundcolor);
   margin-left: auto;
   margin-right: auto;
@@ -45,10 +44,14 @@
   width: 44px;
   height: 44px;
   margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
-.social-item:last-child {
-  margin-right: 0;
-}
+// .social-item:last-child {
+//   margin-right: 0;
+// }
 .social-link {
   width: 100%;
   height: 100%;
@@ -58,28 +61,41 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: background-color 250ms var(--time--animation),
+    fill 250ms var(--time--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent--color);
+  }
 }
 .social-icon {
   width: 22px;
   height: 22px;
   fill: currentColor;
+
+  .social-link:hover &,
+  .social-link:focus & {
+    fill: var(--main--backgraundcolor);
+  }
 }
 .social-list {
   display: flex;
   justify-content: center;
 }
-.social-link {
-  transition: background-color 250ms var(--time--animation),
-    fill 250ms var(--time--animation);
-}
+// .social-link {
+//   transition: background-color 250ms var(--time--animation),
+//     fill 250ms var(--time--animation);
+// }
 /* .clients-link .social-icon {
   transition: fill 5000ms var(--time--animation);
 } */
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent--color);
-}
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-  fill: var(--main--backgraundcolor);
-}
+// .social-link:hover,
+// .social-link:focus {
+//   background-color: var(--accent--color);
+// }
+// .social-link:hover .social-icon,
+// .social-link:focus .social-icon {
+//   fill: var(--main--backgraundcolor);
+// }

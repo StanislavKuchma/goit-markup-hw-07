@@ -104,6 +104,7 @@ textarea::placeholder {
   border: 1px solid var(--text--color);
   cursor: pointer;
   margin-right: 8px;
+  border-radius: 4px;
 }
 .form-checkbox:checked + .form-checkbox-label::before {
   background-image: url(../images/icon-check.svg);
@@ -121,50 +122,4 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.join-subscribe {
-  margin-left: 93px;
-}
-.form-subscribe {
-  display: flex;
-  justify-content: center;
-}
-.subscribe-input {
-  width: 358px;
-  height: 50px;
-  margin-right: 12px;
-  background-color: #2f303a;
-  font-size: 16px;
-  line-height: 1.25;
-  color: var(--text--color--white);
-  padding-left: 18px;
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-}
-.subscribe-input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.03em;
-
-  color: rgba(255, 255, 255, 0.6);
-}
-.subscribe-button {
-  display: flex;
-  align-items: center;
-  padding: 10px auto;
-}
-.subscribe-button::after {
-  display: inline-block;
-  content: "";
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-  background-image: url(../images/icon-send.svg);
-  background-size: cover;
 }

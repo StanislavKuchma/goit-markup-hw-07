@@ -4,43 +4,69 @@ header {
   padding-bottom: 24px;
   border-bottom: 1px solid #ececec;
 }
-.site-nav .link {
+.nav-link {
   color: var(--text--color);
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-.nav-link {
+
   position: relative;
 
   transition: color 250ms var(--time--animation);
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    bottom: -32px;
+    background-color: var(--accent--color);
+    width: 0%;
+  }
+  &.current::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    bottom: -32px;
+    background-color: var(--accent--color);
+    width: 100%;
+  }
 }
-.site-nav .link::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  bottom: -32px;
-  background-color: var(--accent--color);
-  width: 0%;
-  /* transition: width 1000ms var(--time--animation); */
-}
-.site-nav .link.current::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  bottom: -32px;
-  background-color: var(--accent--color);
-  width: 100%;
-  /* transition: width 100000ms var(--time--animation); */
-}
+// .nav-link {
+//   position: relative;
+
+//   transition: color 250ms var(--time--animation);
+// }
+// .nav-link::before {
+//   content: "";
+//   position: absolute;
+//   display: block;
+//   width: 100%;
+//   height: 4px;
+//   border-radius: 4px;
+//   bottom: -32px;
+//   background-color: var(--accent--color);
+//   width: 0%;
+// }
+// .nav-link.current::before {
+//   content: "";
+//   position: absolute;
+//   display: block;
+//   width: 100%;
+//   height: 4px;
+//   border-radius: 4px;
+//   bottom: -32px;
+//   background-color: var(--accent--color);
+//   width: 100%;
+
+// }
 .site-nav {
   display: flex;
   align-items: center;
@@ -55,10 +81,15 @@ header {
 .header-icon {
   margin-right: 10px;
   fill: currentColor;
+
+  .header-nav-link:focus &,
+  .header-nav-link:hover & {
+    fill: var(--accent--color);
+  }
 }
-.header-nav-link:not(:last-child) {
-  margin-right: 50px;
-}
+// .header-nav-link:not(:last-child) {
+//   margin-right: 50px;
+// }
 
 .link-icon {
   display: flex;
@@ -67,16 +98,27 @@ header {
 .header-nav-link {
   transition: color 250ms var(--time--animation),
     fill 250ms var(--time--animation);
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &:focus,
+  &:hover {
+    color: var(--accent--color);
+    fill: var(--accent--color);
+  }
 }
-.header-nav-link:focus,
-.header-nav-link:hover {
-  color: var(--accent--color);
-  fill: var(--accent--color);
-}
-.header-nav-link:focus .header-icon,
-.header-nav-link:hover .header-icon {
-  fill: var(--accent--color);
-}
+
+// .header-nav-link:focus,
+// .header-nav-link:hover {
+//   color: var(--accent--color);
+//   fill: var(--accent--color);
+// }
+// .header-nav-link:focus .header-icon,
+// .header-nav-link:hover .header-icon {
+//   fill: var(--accent--color);
+// }
 
 .header-contact {
   display: flex;
@@ -87,15 +129,15 @@ header {
   display: flex;
   align-items: center;
 }
-.site-nav .link {
+.nav-link {
   transition: color 250ms var(--time--animation);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent--color);
 }
-.site-nav .link.current {
+.nav-link.current {
   color: var(--accent--color);
 }
 .logo {
@@ -111,20 +153,23 @@ header {
   color: var(--accent--color);
 }
 
-.header-contact a {
-  color: var(--primary--text--color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+.header-contact {
+  & a {
+    color: var(--primary--text--color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 
-  transition: color 250ms var(--time--animation);
-}
+    transition: color 250ms var(--time--animation);
+  }
 
-.header-contact a:hover,
-.header-contact a:focus {
-  color: var(--accent--color);
+  & a:hover,
+  & a:focus {
+    color: var(--accent--color);
+  }
 }
-.footer-contacts .link {
-  text-decoration: none;
-}
+// .header-contact a:hover,
+// .header-contact a:focus {
+//   color: var(--accent--color);
+// }

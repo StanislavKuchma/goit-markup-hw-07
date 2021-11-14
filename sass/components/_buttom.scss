@@ -17,9 +17,15 @@
 
   transition: background-color 250ms var(--time--animation),
     color 250ms var(--time--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--botton--color--hover);
+    color: var(--text--color--white);
+  }
 }
-.button:hover,
-.button:focus {
-  background-color: var(--botton--color--hover);
-  color: var(--text--color--white);
-}
+// .button:hover,
+// .button:focus {
+//   background-color: var(--botton--color--hover);
+//   color: var(--text--color--white);
+// }
