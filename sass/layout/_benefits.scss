@@ -1,4 +1,4 @@
-.benefits .title {
+.benefits-title {
   color: var(--text--color);
   font-weight: 700;
   font-size: 14px;
@@ -39,26 +39,3 @@
     background-image: url(../images/astronaut.svg);
   }
 }
-
-// .benefits-item::before {
-//   content: "";
-//   display: block;
-//   height: 120px;
-//   margin-bottom: 30px;
-//   background-size: 70px;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-color: var(--backgraundcolor);
-// }
-// .benefits-item:nth-child(1):before {
-//   background-image: url(../images/antenna.svg);
-// }
-// .benefits-item:nth-child(2):before {
-//   background-image: url(../images/clock.svg);
-// }
-// .benefits-item:nth-child(3):before {
-//   background-image: url(../images/diagram.svg);
-// }
-// .benefits-item:nth-child(4):before {
-//   background-image: url(../images/astronaut.svg);
-// }

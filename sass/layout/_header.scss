@@ -1,9 +1,11 @@
-/*навигация*/
-header {
+/*Header*/
+
+.header {
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid #ececec;
 }
+/*навигация*/
 .nav__link {
   color: var(--text--color);
   text-decoration: none;
@@ -110,19 +112,6 @@ header {
 .header-conteiner {
   display: flex;
   align-items: center;
-}
-
-.logo {
-  color: var(--text--color);
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-
-  margin-right: 93px;
-}
-.logo span {
-  color: var(--accent--color);
 }
 
 .contact {
